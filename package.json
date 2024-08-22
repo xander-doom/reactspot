@@ -4,6 +4,7 @@
   "private": "true",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://xander-doom.github.io/reactspot/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
