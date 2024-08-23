@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 function renderGraph(root, data) {
   const layout = {
-    title: `Commits to the git/git repo (${new Date(data[0].week * 1000).toLocaleDateString()} - ${new Date(data[data.length - 1].week * 1000).toLocaleDateString()})`,
+    title: `Commits to the mdn/content repo (${new Date(data[0].week * 1000).toLocaleDateString()} - ${new Date(data[data.length - 1].week * 1000).toLocaleDateString()})`,
     xaxis: {
       title: "Week",
       showgrid: true,
@@ -32,7 +32,7 @@ function renderGraph(root, data) {
 
 function renderGrid(root, data) {
   const layout = {
-    title: `Commits to the git/git repo, by day`,
+    title: `Commits to the mdn/content repo, by day`,
     height: 350,
   };
   const zValues = Array.from({ length: 7 }, () => []);
@@ -54,9 +54,9 @@ function Example() {
   const { isPending, error, data } = useQuery({
     queryKey: ["repoData"],
     queryFn: () =>
-      fetch("https://api.github.com/repos/git/git/stats/commit_activity").then(
-        (res) => res.json(),
-      ),
+      fetch(
+        "https://api.github.com/repos/mdn/content/stats/commit_activity",
+      ).then((res) => res.json()),
   });
 
   if (isPending) return "Loading...";
