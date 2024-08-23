@@ -6,7 +6,7 @@
   "main": "index.js",
   "homepage": "https://xander-doom.github.io/reactspot/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -23,7 +23,8 @@
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "prettier-eslint": "^13.0.0",
-    "vite": "^5.4.2"
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.52.1",
